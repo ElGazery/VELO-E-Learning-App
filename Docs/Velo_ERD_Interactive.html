@@ -1,0 +1,1153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Velo ERD</title><style>
+*{box-sizing:border-box} html,body{margin:0;height:100%;font-family:'Segoe UI',Verdana,Arial,sans-serif;background:#f3f4f6;color:#111}
+#bar{position:fixed;top:0;left:0;right:0;height:52px;background:#fff;border-bottom:1px solid #e5e7eb;display:flex;align-items:center;gap:8px;padding:0 12px;z-index:5}
+#bar h1{font-size:16px;margin:0 auto 0 0;color:#4F46E5;white-space:nowrap}
+button{border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;border-radius:8px;padding:7px 12px;font-size:14px;cursor:pointer;min-width:40px}
+button:hover{background:#e0e7ff} #pct{min-width:52px;text-align:center;font-size:13px;color:#555}
+#view{position:fixed;top:52px;left:0;right:0;bottom:0;overflow:hidden;touch-action:none;cursor:grab;background:#fff}
+#view.drag{cursor:grabbing} #stage{transform-origin:0 0;position:absolute;left:0;top:0}
+#stage svg text{font-family:'DejaVu Sans',Verdana,'Segoe UI',Arial,sans-serif}
+#hint{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);background:#111c;color:#fff;font-size:12px;padding:6px 12px;border-radius:20px;pointer-events:none;transition:opacity .6s}
+@media print{#bar,#hint{display:none} #view{position:static} #stage{transform:none!important}}
+</style></head><body>
+<div id="bar"><h1>Velo E-Learning – ERD (29 tables)</h1>
+<button id="out" title="Zoom out">−</button><span id="pct">100%</span><button id="in" title="Zoom in">+</button>
+<button id="fit">Fit</button><button id="one">100%</button></div>
+<div id="view"><div id="stage"><svg width="3268.5" height="1732.0"
+ viewBox="0.00 0.00 3268.50 1732.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(36 1696)">
+<title>ERD</title>
+<polygon fill="white" stroke="transparent" points="-36,36 -36,-1696 3232.5,-1696 3232.5,36 -36,36"/>
+<text text-anchor="start" x="1413.25" y="-1633" font-family="DejaVu Sans" font-weight="bold" font-size="30.00">Velo E&#45;Learning – ERD</text>
+<text text-anchor="start" x="1332.25" y="-1615.8" font-family="DejaVu Sans" font-size="14.00" fill="#555555">PK = yellow, FK = blue | colors: Identity, Catalog, Learning, Commerce, Chat</text>
+<!-- USERS -->
+<g id="node1" class="node">
+<title>USERS</title>
+<polygon fill="#4f46e5" stroke="transparent" points="1572.5,-1579.5 1572.5,-1606.5 1807.5,-1606.5 1807.5,-1579.5 1572.5,-1579.5"/>
+<text text-anchor="start" x="1662.5" y="-1590.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">USERS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1572.5,-1555.5 1572.5,-1579.5 1600.5,-1579.5 1600.5,-1555.5 1572.5,-1555.5"/>
+<text text-anchor="start" x="1577.5" y="-1565.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="1605.5" y="-1564.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1752.5" y="-1564.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1531.5 1572.5,-1555.5 1600.5,-1555.5 1600.5,-1531.5 1572.5,-1531.5"/>
+<text text-anchor="start" x="1577.5" y="-1541.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1540.1" font-family="DejaVu Sans" font-size="13.00">FullName</text>
+<text text-anchor="start" x="1752.5" y="-1540.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1507.5 1572.5,-1531.5 1600.5,-1531.5 1600.5,-1507.5 1572.5,-1507.5"/>
+<text text-anchor="start" x="1577.5" y="-1517.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">UK</text>
+<text text-anchor="start" x="1605.5" y="-1516.1" font-family="DejaVu Sans" font-size="13.00">Email</text>
+<text text-anchor="start" x="1752.5" y="-1516.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1483.5 1572.5,-1507.5 1600.5,-1507.5 1600.5,-1483.5 1572.5,-1483.5"/>
+<text text-anchor="start" x="1577.5" y="-1493.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1492.1" font-family="DejaVu Sans" font-size="13.00">PasswordHash</text>
+<text text-anchor="start" x="1752.5" y="-1492.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1459.5 1572.5,-1483.5 1600.5,-1483.5 1600.5,-1459.5 1572.5,-1459.5"/>
+<text text-anchor="start" x="1577.5" y="-1469.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1468.1" font-family="DejaVu Sans" font-size="13.00">ProfileImageUrl</text>
+<text text-anchor="start" x="1752.5" y="-1468.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1435.5 1572.5,-1459.5 1600.5,-1459.5 1600.5,-1435.5 1572.5,-1435.5"/>
+<text text-anchor="start" x="1577.5" y="-1445.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1444.1" font-family="DejaVu Sans" font-size="13.00">NotificationsEnabled</text>
+<text text-anchor="start" x="1752.5" y="-1444.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1411.5 1572.5,-1435.5 1600.5,-1435.5 1600.5,-1411.5 1572.5,-1411.5"/>
+<text text-anchor="start" x="1577.5" y="-1421.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1420.1" font-family="DejaVu Sans" font-size="13.00">EmailConfirmed</text>
+<text text-anchor="start" x="1752.5" y="-1420.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="1572.5,-1387.5 1572.5,-1411.5 1600.5,-1411.5 1600.5,-1387.5 1572.5,-1387.5"/>
+<text text-anchor="start" x="1577.5" y="-1397.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1605.5" y="-1396.1" font-family="DejaVu Sans" font-size="13.00">CreatedAt</text>
+<text text-anchor="start" x="1752.5" y="-1396.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#4f46e5" points="1571,-1387 1571,-1608 1808,-1608 1808,-1387 1571,-1387"/>
+</g>
+<!-- INSTRUCTOR_PROFILES -->
+<g id="node2" class="node">
+<title>INSTRUCTOR_PROFILES</title>
+<polygon fill="#4f46e5" stroke="transparent" points="1339.5,-1098.5 1339.5,-1125.5 1547.5,-1125.5 1547.5,-1098.5 1339.5,-1098.5"/>
+<text text-anchor="start" x="1344.5" y="-1109.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">INSTRUCTOR_PROFILES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1339.5,-1074.5 1339.5,-1098.5 1390.5,-1098.5 1390.5,-1074.5 1339.5,-1074.5"/>
+<text text-anchor="start" x="1344.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="1395.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1508.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1339.5,-1050.5 1339.5,-1074.5 1390.5,-1074.5 1390.5,-1050.5 1339.5,-1050.5"/>
+<text text-anchor="start" x="1344.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1395.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">JobTitle</text>
+<text text-anchor="start" x="1508.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1339.5,-1026.5 1339.5,-1050.5 1390.5,-1050.5 1390.5,-1026.5 1339.5,-1026.5"/>
+<text text-anchor="start" x="1344.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1395.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">Bio</text>
+<text text-anchor="start" x="1508.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1339.5,-1002.5 1339.5,-1026.5 1390.5,-1026.5 1390.5,-1002.5 1339.5,-1002.5"/>
+<text text-anchor="start" x="1344.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1395.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">AcademyName</text>
+<text text-anchor="start" x="1508.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="none" stroke="#4f46e5" points="1338.5,-1002 1338.5,-1127 1548.5,-1127 1548.5,-1002 1338.5,-1002"/>
+</g>
+<!-- USERS&#45;&gt;INSTRUCTOR_PROFILES -->
+<g id="edge1" class="edge">
+<title>USERS&#45;&gt;INSTRUCTOR_PROFILES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1621.05,-1381.86C1604.36,-1353.56 1586.66,-1323.26 1570.5,-1295 1541.02,-1243.44 1508.61,-1184.84 1483.91,-1139.77"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1628.11,-1383.01 1618.64,-1388.6 1617.52,-1386.71 1627,-1381.12 1628.11,-1383.01"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1623.94,-1386.76 1621.14,-1382.02 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1472.7,-1130.73 1482.35,-1125.45 1483.4,-1127.38 1473.75,-1132.66 1472.7,-1130.73"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1476.99,-1127.13 1479.64,-1131.95 "/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1481.75" cy="-1135.81" rx="4.4" ry="4.4"/>
+</g>
+<!-- REFRESH_TOKENS -->
+<g id="node3" class="node">
+<title>REFRESH_TOKENS</title>
+<polygon fill="#4f46e5" stroke="transparent" points="2050.5,-1122.5 2050.5,-1149.5 2218.5,-1149.5 2218.5,-1122.5 2050.5,-1122.5"/>
+<text text-anchor="start" x="2057.5" y="-1133.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">REFRESH_TOKENS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2050.5,-1098.5 2050.5,-1122.5 2077.5,-1122.5 2077.5,-1098.5 2050.5,-1098.5"/>
+<text text-anchor="start" x="2055.5" y="-1108.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2082.5" y="-1107.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2163.5" y="-1107.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2050.5,-1074.5 2050.5,-1098.5 2077.5,-1098.5 2077.5,-1074.5 2050.5,-1074.5"/>
+<text text-anchor="start" x="2055.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2082.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="2163.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="2050.5,-1050.5 2050.5,-1074.5 2077.5,-1074.5 2077.5,-1050.5 2050.5,-1050.5"/>
+<text text-anchor="start" x="2055.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2082.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">TokenHash</text>
+<text text-anchor="start" x="2163.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2050.5,-1026.5 2050.5,-1050.5 2077.5,-1050.5 2077.5,-1026.5 2050.5,-1026.5"/>
+<text text-anchor="start" x="2055.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2082.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">DeviceId</text>
+<text text-anchor="start" x="2163.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2050.5,-1002.5 2050.5,-1026.5 2077.5,-1026.5 2077.5,-1002.5 2050.5,-1002.5"/>
+<text text-anchor="start" x="2055.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2082.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">ExpiresAt</text>
+<text text-anchor="start" x="2163.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="white" stroke="transparent" points="2050.5,-978.5 2050.5,-1002.5 2077.5,-1002.5 2077.5,-978.5 2050.5,-978.5"/>
+<text text-anchor="start" x="2055.5" y="-988.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2082.5" y="-987.1" font-family="DejaVu Sans" font-size="13.00">RevokedAt</text>
+<text text-anchor="start" x="2163.5" y="-987.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#4f46e5" points="2049.5,-978 2049.5,-1151 2219.5,-1151 2219.5,-978 2049.5,-978"/>
+</g>
+<!-- USERS&#45;&gt;REFRESH_TOKENS -->
+<g id="edge2" class="edge">
+<title>USERS&#45;&gt;REFRESH_TOKENS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1813.05,-1445.14C1883.18,-1410.97 1968.46,-1360.34 2027.5,-1295 2059.77,-1259.28 2084.02,-1212.12 2101.19,-1169.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1811.42,-1452.04 1806.62,-1442.14 1808.6,-1441.18 1813.4,-1451.08 1811.42,-1452.04"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.03,-1447.57 1812.98,-1445.17 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2104.48,-1161.39 2113.09,-1152.94 2106.48,-1156.27 2108.47,-1151.14 2108.47,-1151.14 2108.47,-1151.14 2106.48,-1156.27 2103.86,-1149.35 2104.48,-1161.39 2104.48,-1161.39"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2102.89" cy="-1165.49" rx="4.4" ry="4.4"/>
+</g>
+<!-- OTP_CODES -->
+<g id="node4" class="node">
+<title>OTP_CODES</title>
+<polygon fill="#4f46e5" stroke="transparent" points="2264.5,-1134.5 2264.5,-1161.5 2461.5,-1161.5 2461.5,-1134.5 2264.5,-1134.5"/>
+<text text-anchor="start" x="2313" y="-1145.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">OTP_CODES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2264.5,-1110.5 2264.5,-1134.5 2291.5,-1134.5 2291.5,-1110.5 2264.5,-1110.5"/>
+<text text-anchor="start" x="2269.5" y="-1120.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2296.5" y="-1119.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2406.5" y="-1119.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2264.5,-1086.5 2264.5,-1110.5 2291.5,-1110.5 2291.5,-1086.5 2264.5,-1086.5"/>
+<text text-anchor="start" x="2269.5" y="-1096.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2296.5" y="-1095.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="2406.5" y="-1095.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="2264.5,-1062.5 2264.5,-1086.5 2291.5,-1086.5 2291.5,-1062.5 2264.5,-1062.5"/>
+<text text-anchor="start" x="2269.5" y="-1072.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2296.5" y="-1071.1" font-family="DejaVu Sans" font-size="13.00">CodeHash</text>
+<text text-anchor="start" x="2406.5" y="-1071.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2264.5,-1038.5 2264.5,-1062.5 2291.5,-1062.5 2291.5,-1038.5 2264.5,-1038.5"/>
+<text text-anchor="start" x="2269.5" y="-1048.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2296.5" y="-1047.1" font-family="DejaVu Sans" font-size="13.00">Purpose</text>
+<text text-anchor="start" x="2406.5" y="-1047.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2264.5,-1014.5 2264.5,-1038.5 2291.5,-1038.5 2291.5,-1014.5 2264.5,-1014.5"/>
+<text text-anchor="start" x="2269.5" y="-1024.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2296.5" y="-1023.1" font-family="DejaVu Sans" font-size="13.00">ExpiresAt</text>
+<text text-anchor="start" x="2406.5" y="-1023.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="white" stroke="transparent" points="2264.5,-990.5 2264.5,-1014.5 2291.5,-1014.5 2291.5,-990.5 2264.5,-990.5"/>
+<text text-anchor="start" x="2269.5" y="-1000.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2296.5" y="-999.1" font-family="DejaVu Sans" font-size="13.00">IsUsed</text>
+<text text-anchor="start" x="2406.5" y="-999.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="2264.5,-966.5 2264.5,-990.5 2291.5,-990.5 2291.5,-966.5 2264.5,-966.5"/>
+<text text-anchor="start" x="2269.5" y="-976.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2296.5" y="-975.1" font-family="DejaVu Sans" font-size="13.00">FailedAttempts</text>
+<text text-anchor="start" x="2406.5" y="-975.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="none" stroke="#4f46e5" points="2263,-966 2263,-1163 2462,-1163 2462,-966 2263,-966"/>
+</g>
+<!-- USERS&#45;&gt;OTP_CODES -->
+<g id="edge3" class="edge">
+<title>USERS&#45;&gt;OTP_CODES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1813.76,-1477.54C1934.88,-1453.47 2118.19,-1401.5 2240.5,-1295 2275.4,-1264.61 2301.92,-1221.74 2321.17,-1181.26"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1810.18,-1483.85 1808.06,-1473.06 1810.21,-1472.63 1812.34,-1483.43 1810.18,-1483.85"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.04,-1478.67 1813.43,-1477.6 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2324.83,-1173.2 2333.88,-1165.24 2327.1,-1168.2 2329.37,-1163.19 2329.37,-1163.19 2329.37,-1163.19 2327.1,-1168.2 2324.87,-1161.14 2324.83,-1173.2 2324.83,-1173.2"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2323.01" cy="-1177.21" rx="4.4" ry="4.4"/>
+</g>
+<!-- DEVICE_TOKENS -->
+<g id="node5" class="node">
+<title>DEVICE_TOKENS</title>
+<polygon fill="#4f46e5" stroke="transparent" points="3021.5,-1122.5 3021.5,-1149.5 3195.5,-1149.5 3195.5,-1122.5 3021.5,-1122.5"/>
+<text text-anchor="start" x="3039.5" y="-1133.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">DEVICE_TOKENS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="3021.5,-1098.5 3021.5,-1122.5 3049.5,-1122.5 3049.5,-1098.5 3021.5,-1098.5"/>
+<text text-anchor="start" x="3026.5" y="-1108.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="3054.5" y="-1107.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="3140.5" y="-1107.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="3021.5,-1074.5 3021.5,-1098.5 3049.5,-1098.5 3049.5,-1074.5 3021.5,-1074.5"/>
+<text text-anchor="start" x="3026.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="3054.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="3140.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="3021.5,-1050.5 3021.5,-1074.5 3049.5,-1074.5 3049.5,-1050.5 3021.5,-1050.5"/>
+<text text-anchor="start" x="3026.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="3054.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">FcmToken</text>
+<text text-anchor="start" x="3140.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="3021.5,-1026.5 3021.5,-1050.5 3049.5,-1050.5 3049.5,-1026.5 3021.5,-1026.5"/>
+<text text-anchor="start" x="3026.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="3054.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">Platform</text>
+<text text-anchor="start" x="3140.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="3021.5,-1002.5 3021.5,-1026.5 3049.5,-1026.5 3049.5,-1002.5 3021.5,-1002.5"/>
+<text text-anchor="start" x="3026.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">UK</text>
+<text text-anchor="start" x="3054.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">DeviceId</text>
+<text text-anchor="start" x="3140.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="3021.5,-978.5 3021.5,-1002.5 3049.5,-1002.5 3049.5,-978.5 3021.5,-978.5"/>
+<text text-anchor="start" x="3026.5" y="-988.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="3054.5" y="-987.1" font-family="DejaVu Sans" font-size="13.00">LastSeenAt</text>
+<text text-anchor="start" x="3140.5" y="-987.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#4f46e5" points="3020.5,-978 3020.5,-1151 3196.5,-1151 3196.5,-978 3020.5,-978"/>
+</g>
+<!-- USERS&#45;&gt;DEVICE_TOKENS -->
+<g id="edge4" class="edge">
+<title>USERS&#45;&gt;DEVICE_TOKENS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1813.61,-1492.88C2104.19,-1482.01 2817.84,-1440.79 2999.5,-1295 3038.71,-1263.54 3064.61,-1214.6 3081.28,-1169.99"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1809.39,-1498.54 1808.99,-1487.54 1811.18,-1487.46 1811.59,-1498.45 1809.39,-1498.54"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.09,-1493.08 1813.59,-1492.88 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="3084.23,-1161.57 3092.54,-1152.83 3086.05,-1156.38 3087.87,-1151.19 3087.87,-1151.19 3087.87,-1151.19 3086.05,-1156.38 3083.2,-1149.56 3084.23,-1161.57 3084.23,-1161.57"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="3082.77" cy="-1165.73" rx="4.4" ry="4.4"/>
+</g>
+<!-- NOTIFICATIONS -->
+<g id="node6" class="node">
+<title>NOTIFICATIONS</title>
+<polygon fill="#4f46e5" stroke="transparent" points="863.5,-1146.5 863.5,-1173.5 1027.5,-1173.5 1027.5,-1146.5 863.5,-1146.5"/>
+<text text-anchor="start" x="880" y="-1157.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">NOTIFICATIONS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="863.5,-1122.5 863.5,-1146.5 890.5,-1146.5 890.5,-1122.5 863.5,-1122.5"/>
+<text text-anchor="start" x="868.5" y="-1132.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="895.5" y="-1131.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="972.5" y="-1131.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="863.5,-1098.5 863.5,-1122.5 890.5,-1122.5 890.5,-1098.5 863.5,-1098.5"/>
+<text text-anchor="start" x="868.5" y="-1108.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="895.5" y="-1107.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="972.5" y="-1107.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="863.5,-1074.5 863.5,-1098.5 890.5,-1098.5 890.5,-1074.5 863.5,-1074.5"/>
+<text text-anchor="start" x="868.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">Title</text>
+<text text-anchor="start" x="972.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="863.5,-1050.5 863.5,-1074.5 890.5,-1074.5 890.5,-1050.5 863.5,-1050.5"/>
+<text text-anchor="start" x="868.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">Body</text>
+<text text-anchor="start" x="972.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="863.5,-1026.5 863.5,-1050.5 890.5,-1050.5 890.5,-1026.5 863.5,-1026.5"/>
+<text text-anchor="start" x="868.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">Type</text>
+<text text-anchor="start" x="972.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="863.5,-1002.5 863.5,-1026.5 890.5,-1026.5 890.5,-1002.5 863.5,-1002.5"/>
+<text text-anchor="start" x="868.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">DataJson</text>
+<text text-anchor="start" x="972.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="863.5,-978.5 863.5,-1002.5 890.5,-1002.5 890.5,-978.5 863.5,-978.5"/>
+<text text-anchor="start" x="868.5" y="-988.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-987.1" font-family="DejaVu Sans" font-size="13.00">IsRead</text>
+<text text-anchor="start" x="972.5" y="-987.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="863.5,-954.5 863.5,-978.5 890.5,-978.5 890.5,-954.5 863.5,-954.5"/>
+<text text-anchor="start" x="868.5" y="-964.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="895.5" y="-963.1" font-family="DejaVu Sans" font-size="13.00">CreatedAt</text>
+<text text-anchor="start" x="972.5" y="-963.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#4f46e5" points="862.5,-954 862.5,-1175 1028.5,-1175 1028.5,-954 862.5,-954"/>
+</g>
+<!-- USERS&#45;&gt;NOTIFICATIONS -->
+<g id="edge5" class="edge">
+<title>USERS&#45;&gt;NOTIFICATIONS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.24,-1480.51C1404.56,-1457.58 1136.41,-1410.97 1061.5,-1347 1016.03,-1308.16 988.09,-1248.68 971.07,-1194.37"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1570.6,-1475.71 1569.05,-1486.6 1566.87,-1486.3 1568.42,-1475.4 1570.6,-1475.71"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.91,-1481.31 1565.47,-1480.54 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="968.49,-1185.59 970.14,-1173.64 966.94,-1180.32 965.39,-1175.04 965.39,-1175.04 965.39,-1175.04 966.94,-1180.32 960.64,-1176.43 968.49,-1185.59 968.49,-1185.59"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="969.73" cy="-1189.81" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSES -->
+<g id="node8" class="node">
+<title>COURSES</title>
+<polygon fill="#0e7490" stroke="transparent" points="574.5,-1266.5 574.5,-1293.5 818.5,-1293.5 818.5,-1266.5 574.5,-1266.5"/>
+<text text-anchor="start" x="657" y="-1277.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">COURSES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="574.5,-1242.5 574.5,-1266.5 601.5,-1266.5 601.5,-1242.5 574.5,-1242.5"/>
+<text text-anchor="start" x="579.5" y="-1252.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="606.5" y="-1251.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="757.5" y="-1251.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="574.5,-1218.5 574.5,-1242.5 601.5,-1242.5 601.5,-1218.5 574.5,-1218.5"/>
+<text text-anchor="start" x="579.5" y="-1228.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="606.5" y="-1227.1" font-family="DejaVu Sans" font-size="13.00">InstructorId</text>
+<text text-anchor="start" x="757.5" y="-1227.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="574.5,-1194.5 574.5,-1218.5 601.5,-1218.5 601.5,-1194.5 574.5,-1194.5"/>
+<text text-anchor="start" x="579.5" y="-1204.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="606.5" y="-1203.1" font-family="DejaVu Sans" font-size="13.00">CategoryId</text>
+<text text-anchor="start" x="757.5" y="-1203.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1170.5 574.5,-1194.5 601.5,-1194.5 601.5,-1170.5 574.5,-1170.5"/>
+<text text-anchor="start" x="579.5" y="-1180.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1179.1" font-family="DejaVu Sans" font-size="13.00">Title</text>
+<text text-anchor="start" x="757.5" y="-1179.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1146.5 574.5,-1170.5 601.5,-1170.5 601.5,-1146.5 574.5,-1146.5"/>
+<text text-anchor="start" x="579.5" y="-1156.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1155.1" font-family="DejaVu Sans" font-size="13.00">Description</text>
+<text text-anchor="start" x="757.5" y="-1155.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1122.5 574.5,-1146.5 601.5,-1146.5 601.5,-1122.5 574.5,-1122.5"/>
+<text text-anchor="start" x="579.5" y="-1132.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1131.1" font-family="DejaVu Sans" font-size="13.00">ThumbnailUrl</text>
+<text text-anchor="start" x="757.5" y="-1131.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1098.5 574.5,-1122.5 601.5,-1122.5 601.5,-1098.5 574.5,-1098.5"/>
+<text text-anchor="start" x="579.5" y="-1108.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1107.1" font-family="DejaVu Sans" font-size="13.00">PreviewVideoUrl</text>
+<text text-anchor="start" x="757.5" y="-1107.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1074.5 574.5,-1098.5 601.5,-1098.5 601.5,-1074.5 574.5,-1074.5"/>
+<text text-anchor="start" x="579.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">Price</text>
+<text text-anchor="start" x="757.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1050.5 574.5,-1074.5 601.5,-1074.5 601.5,-1050.5 574.5,-1050.5"/>
+<text text-anchor="start" x="579.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">DiscountPrice</text>
+<text text-anchor="start" x="757.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal?</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1026.5 574.5,-1050.5 601.5,-1050.5 601.5,-1026.5 574.5,-1026.5"/>
+<text text-anchor="start" x="579.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">DiscountEndsAt</text>
+<text text-anchor="start" x="757.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime?</text>
+<polygon fill="white" stroke="transparent" points="574.5,-1002.5 574.5,-1026.5 601.5,-1026.5 601.5,-1002.5 574.5,-1002.5"/>
+<text text-anchor="start" x="579.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">Level</text>
+<text text-anchor="start" x="757.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-978.5 574.5,-1002.5 601.5,-1002.5 601.5,-978.5 574.5,-978.5"/>
+<text text-anchor="start" x="579.5" y="-988.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-987.1" font-family="DejaVu Sans" font-size="13.00">Status</text>
+<text text-anchor="start" x="757.5" y="-987.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="574.5,-954.5 574.5,-978.5 601.5,-978.5 601.5,-954.5 574.5,-954.5"/>
+<text text-anchor="start" x="579.5" y="-964.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-963.1" font-family="DejaVu Sans" font-size="13.00">TotalDurationMinutes</text>
+<text text-anchor="start" x="757.5" y="-963.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="574.5,-930.5 574.5,-954.5 601.5,-954.5 601.5,-930.5 574.5,-930.5"/>
+<text text-anchor="start" x="579.5" y="-940.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-939.1" font-family="DejaVu Sans" font-size="13.00">RatingAverage</text>
+<text text-anchor="start" x="757.5" y="-939.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="574.5,-906.5 574.5,-930.5 601.5,-930.5 601.5,-906.5 574.5,-906.5"/>
+<text text-anchor="start" x="579.5" y="-916.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-915.1" font-family="DejaVu Sans" font-size="13.00">RatingCount</text>
+<text text-anchor="start" x="757.5" y="-915.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="574.5,-882.5 574.5,-906.5 601.5,-906.5 601.5,-882.5 574.5,-882.5"/>
+<text text-anchor="start" x="579.5" y="-892.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-891.1" font-family="DejaVu Sans" font-size="13.00">StudentsCount</text>
+<text text-anchor="start" x="757.5" y="-891.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="574.5,-858.5 574.5,-882.5 601.5,-882.5 601.5,-858.5 574.5,-858.5"/>
+<text text-anchor="start" x="579.5" y="-868.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-867.1" font-family="DejaVu Sans" font-size="13.00">IsDeleted</text>
+<text text-anchor="start" x="757.5" y="-867.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="574.5,-834.5 574.5,-858.5 601.5,-858.5 601.5,-834.5 574.5,-834.5"/>
+<text text-anchor="start" x="579.5" y="-844.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="606.5" y="-843.1" font-family="DejaVu Sans" font-size="13.00">CreatedAt</text>
+<text text-anchor="start" x="757.5" y="-843.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#0e7490" points="573.5,-834 573.5,-1295 819.5,-1295 819.5,-834 573.5,-834"/>
+</g>
+<!-- USERS&#45;&gt;COURSES -->
+<g id="edge6" class="edge">
+<title>USERS&#45;&gt;COURSES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.18,-1480.01C1357.67,-1450.39 952.44,-1382.97 840.5,-1295 838.47,-1293.41 836.46,-1291.77 834.48,-1290.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1570.34,-1475.19 1568.79,-1486.08 1566.61,-1485.77 1568.16,-1474.88 1570.34,-1475.19"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.65,-1480.79 1565.2,-1480.01 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="827.81,-1284.08 822.98,-1273.03 823.73,-1280.39 819.66,-1276.7 819.66,-1276.7 819.66,-1276.7 823.73,-1280.39 816.33,-1280.37 827.81,-1284.08 827.81,-1284.08"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="831.07" cy="-1287.03" rx="4.4" ry="4.4"/>
+<text text-anchor="middle" x="955.5" y="-1338.2" font-family="DejaVu Sans" font-size="11.00" fill="#444444">teaches</text>
+</g>
+<!-- ENROLLMENTS -->
+<g id="node14" class="node">
+<title>ENROLLMENTS</title>
+<polygon fill="#15803d" stroke="transparent" points="1146.5,-724.5 1146.5,-751.5 1377.5,-751.5 1377.5,-724.5 1146.5,-724.5"/>
+<text text-anchor="start" x="1198.5" y="-735.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">ENROLLMENTS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1146.5,-700.5 1146.5,-724.5 1194.5,-724.5 1194.5,-700.5 1146.5,-700.5"/>
+<text text-anchor="start" x="1151.5" y="-710.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="1199.5" y="-709.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1316.5" y="-709.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1146.5,-676.5 1146.5,-700.5 1194.5,-700.5 1194.5,-676.5 1146.5,-676.5"/>
+<text text-anchor="start" x="1151.5" y="-686.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="1199.5" y="-685.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1316.5" y="-685.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1146.5,-652.5 1146.5,-676.5 1194.5,-676.5 1194.5,-652.5 1146.5,-652.5"/>
+<text text-anchor="start" x="1151.5" y="-662.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="1199.5" y="-661.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="1316.5" y="-661.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1146.5,-628.5 1146.5,-652.5 1194.5,-652.5 1194.5,-628.5 1146.5,-628.5"/>
+<text text-anchor="start" x="1151.5" y="-638.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1199.5" y="-637.1" font-family="DejaVu Sans" font-size="13.00">EnrolledAt</text>
+<text text-anchor="start" x="1316.5" y="-637.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="white" stroke="transparent" points="1146.5,-604.5 1146.5,-628.5 1194.5,-628.5 1194.5,-604.5 1146.5,-604.5"/>
+<text text-anchor="start" x="1151.5" y="-614.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1199.5" y="-613.1" font-family="DejaVu Sans" font-size="13.00">ProgressPercent</text>
+<text text-anchor="start" x="1316.5" y="-613.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1146.5,-580.5 1146.5,-604.5 1194.5,-604.5 1194.5,-580.5 1146.5,-580.5"/>
+<text text-anchor="start" x="1151.5" y="-590.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="1199.5" y="-589.1" font-family="DejaVu Sans" font-size="13.00">LastLessonId</text>
+<text text-anchor="start" x="1316.5" y="-589.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1146.5,-556.5 1146.5,-580.5 1194.5,-580.5 1194.5,-556.5 1146.5,-556.5"/>
+<text text-anchor="start" x="1151.5" y="-566.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1199.5" y="-565.1" font-family="DejaVu Sans" font-size="13.00">CompletedAt</text>
+<text text-anchor="start" x="1316.5" y="-565.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime?</text>
+<polygon fill="none" stroke="#15803d" points="1145,-556 1145,-753 1378,-753 1378,-556 1145,-556"/>
+</g>
+<!-- USERS&#45;&gt;ENROLLMENTS -->
+<g id="edge7" class="edge">
+<title>USERS&#45;&gt;ENROLLMENTS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.43,-1480.31C1456.74,-1458.7 1305.63,-1408.87 1236.5,-1295 1139.26,-1134.84 1180.98,-908.18 1220.78,-772.14"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1570.88,-1475.77 1568.77,-1486.57 1566.61,-1486.14 1568.72,-1475.35 1570.88,-1475.77"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.9,-1481.38 1565.51,-1480.32 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1223.32,-763.68 1231.23,-754.58 1224.91,-758.42 1226.49,-753.15 1226.49,-753.15 1226.49,-753.15 1224.91,-758.42 1221.75,-751.72 1223.32,-763.68 1223.32,-763.68"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1222.06" cy="-767.9" rx="4.4" ry="4.4"/>
+</g>
+<!-- REVIEWS -->
+<g id="node16" class="node">
+<title>REVIEWS</title>
+<polygon fill="#15803d" stroke="transparent" points="1.5,-712.5 1.5,-739.5 186.5,-739.5 186.5,-712.5 1.5,-712.5"/>
+<text text-anchor="start" x="56" y="-723.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">REVIEWS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1.5,-688.5 1.5,-712.5 49.5,-712.5 49.5,-688.5 1.5,-688.5"/>
+<text text-anchor="start" x="6.5" y="-698.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="54.5" y="-697.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="131.5" y="-697.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1.5,-664.5 1.5,-688.5 49.5,-688.5 49.5,-664.5 1.5,-664.5"/>
+<text text-anchor="start" x="6.5" y="-674.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="54.5" y="-673.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="131.5" y="-673.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1.5,-640.5 1.5,-664.5 49.5,-664.5 49.5,-640.5 1.5,-640.5"/>
+<text text-anchor="start" x="6.5" y="-650.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="54.5" y="-649.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="131.5" y="-649.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1.5,-616.5 1.5,-640.5 49.5,-640.5 49.5,-616.5 1.5,-616.5"/>
+<text text-anchor="start" x="6.5" y="-626.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="54.5" y="-625.1" font-family="DejaVu Sans" font-size="13.00">Rating</text>
+<text text-anchor="start" x="131.5" y="-625.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int (1&#45;5)</text>
+<polygon fill="white" stroke="transparent" points="1.5,-592.5 1.5,-616.5 49.5,-616.5 49.5,-592.5 1.5,-592.5"/>
+<text text-anchor="start" x="6.5" y="-602.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="54.5" y="-601.1" font-family="DejaVu Sans" font-size="13.00">Comment</text>
+<text text-anchor="start" x="131.5" y="-601.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1.5,-568.5 1.5,-592.5 49.5,-592.5 49.5,-568.5 1.5,-568.5"/>
+<text text-anchor="start" x="6.5" y="-578.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="54.5" y="-577.1" font-family="DejaVu Sans" font-size="13.00">CreatedAt</text>
+<text text-anchor="start" x="131.5" y="-577.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#15803d" points="0,-568 0,-741 187,-741 187,-568 0,-568"/>
+</g>
+<!-- USERS&#45;&gt;REVIEWS -->
+<g id="edge8" class="edge">
+<title>USERS&#45;&gt;REVIEWS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.02,-1496.31C1252.05,-1493.23 443.61,-1468.28 251.5,-1295 100.9,-1159.16 83.13,-904.63 86.43,-761.04"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1569.91,-1490.86 1569.81,-1501.86 1567.61,-1501.84 1567.71,-1490.84 1569.91,-1490.86"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.96,-1496.37 1565.46,-1496.32 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="86.7,-752.11 91.99,-741.27 86.87,-746.61 87.04,-741.12 87.04,-741.12 87.04,-741.12 86.87,-746.61 82.09,-740.97 86.7,-752.11 86.7,-752.11"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="86.57" cy="-756.51" rx="4.4" ry="4.4"/>
+</g>
+<!-- WISHLIST_ITEMS -->
+<g id="node17" class="node">
+<title>WISHLIST_ITEMS</title>
+<polygon fill="#15803d" stroke="transparent" points="926.5,-676.5 926.5,-703.5 1101.5,-703.5 1101.5,-676.5 926.5,-676.5"/>
+<text text-anchor="start" x="943.5" y="-687.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">WISHLIST_ITEMS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="926.5,-652.5 926.5,-676.5 973.5,-676.5 973.5,-652.5 926.5,-652.5"/>
+<text text-anchor="start" x="931.5" y="-662.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="978.5" y="-661.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1046.5" y="-661.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#fef3c7" stroke="transparent" points="926.5,-628.5 926.5,-652.5 973.5,-652.5 973.5,-628.5 926.5,-628.5"/>
+<text text-anchor="start" x="931.5" y="-638.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="978.5" y="-637.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="1046.5" y="-637.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="926.5,-604.5 926.5,-628.5 973.5,-628.5 973.5,-604.5 926.5,-604.5"/>
+<text text-anchor="start" x="931.5" y="-614.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="978.5" y="-613.1" font-family="DejaVu Sans" font-size="13.00">AddedAt</text>
+<text text-anchor="start" x="1046.5" y="-613.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#15803d" points="925,-604 925,-705 1102,-705 1102,-604 925,-604"/>
+</g>
+<!-- USERS&#45;&gt;WISHLIST_ITEMS -->
+<g id="edge9" class="edge">
+<title>USERS&#45;&gt;WISHLIST_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.18,-1485.51C1442.75,-1467.52 1260.93,-1420.06 1167.5,-1295 1150.21,-1271.86 1064.01,-885.64 1028.66,-724.87"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1570.66,-1480.75 1569.09,-1491.63 1566.91,-1491.32 1568.48,-1480.43 1570.66,-1480.75"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.96,-1486.35 1565.52,-1485.56 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1026.68,-715.82 1029.15,-704.02 1025.5,-710.45 1024.32,-705.08 1024.32,-705.08 1024.32,-705.08 1025.5,-710.45 1019.48,-706.14 1026.68,-715.82 1026.68,-715.82"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1027.62" cy="-720.12" rx="4.4" ry="4.4"/>
+</g>
+<!-- CART_ITEMS -->
+<g id="node18" class="node">
+<title>CART_ITEMS</title>
+<polygon fill="#b45309" stroke="transparent" points="1422.5,-676.5 1422.5,-703.5 1597.5,-703.5 1597.5,-676.5 1422.5,-676.5"/>
+<text text-anchor="start" x="1458" y="-687.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">CART_ITEMS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1422.5,-652.5 1422.5,-676.5 1469.5,-676.5 1469.5,-652.5 1422.5,-652.5"/>
+<text text-anchor="start" x="1427.5" y="-662.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="1474.5" y="-661.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1542.5" y="-661.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1422.5,-628.5 1422.5,-652.5 1469.5,-652.5 1469.5,-628.5 1422.5,-628.5"/>
+<text text-anchor="start" x="1427.5" y="-638.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="1474.5" y="-637.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="1542.5" y="-637.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1422.5,-604.5 1422.5,-628.5 1469.5,-628.5 1469.5,-604.5 1422.5,-604.5"/>
+<text text-anchor="start" x="1427.5" y="-614.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1474.5" y="-613.1" font-family="DejaVu Sans" font-size="13.00">AddedAt</text>
+<text text-anchor="start" x="1542.5" y="-613.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#b45309" points="1421,-604 1421,-705 1598,-705 1598,-604 1421,-604"/>
+</g>
+<!-- USERS&#45;&gt;CART_ITEMS -->
+<g id="edge10" class="edge">
+<title>USERS&#45;&gt;CART_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1565.37,-1465.63C1478.98,-1436.96 1370.04,-1384.78 1316.5,-1295 1211.56,-1119.03 1234.42,-1021.73 1316.5,-834 1319.92,-826.19 1385.12,-766.66 1438.8,-718.47"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1571.44,-1461.83 1568.01,-1472.28 1565.92,-1471.6 1569.35,-1461.15 1571.44,-1461.83"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1570.77,-1467.4 1565.54,-1465.69 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1445.39,-712.57 1456.88,-708.91 1449.48,-708.9 1453.58,-705.23 1453.58,-705.23 1453.58,-705.23 1449.48,-708.9 1450.28,-701.54 1445.39,-712.57 1445.39,-712.57"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1442.11" cy="-715.5" rx="4.4" ry="4.4"/>
+</g>
+<!-- ORDERS -->
+<g id="node20" class="node">
+<title>ORDERS</title>
+<polygon fill="#b45309" stroke="transparent" points="2506.5,-1146.5 2506.5,-1173.5 2713.5,-1173.5 2713.5,-1146.5 2506.5,-1146.5"/>
+<text text-anchor="start" x="2575" y="-1157.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">ORDERS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2506.5,-1122.5 2506.5,-1146.5 2533.5,-1146.5 2533.5,-1122.5 2506.5,-1122.5"/>
+<text text-anchor="start" x="2511.5" y="-1132.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2538.5" y="-1131.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2658.5" y="-1131.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2506.5,-1098.5 2506.5,-1122.5 2533.5,-1122.5 2533.5,-1098.5 2506.5,-1098.5"/>
+<text text-anchor="start" x="2511.5" y="-1108.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2538.5" y="-1107.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="2658.5" y="-1107.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2506.5,-1074.5 2506.5,-1098.5 2533.5,-1098.5 2533.5,-1074.5 2506.5,-1074.5"/>
+<text text-anchor="start" x="2511.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2538.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">PromoCodeId</text>
+<text text-anchor="start" x="2658.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int?</text>
+<polygon fill="white" stroke="transparent" points="2506.5,-1050.5 2506.5,-1074.5 2533.5,-1074.5 2533.5,-1050.5 2506.5,-1050.5"/>
+<text text-anchor="start" x="2511.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2538.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">SubTotal</text>
+<text text-anchor="start" x="2658.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="2506.5,-1026.5 2506.5,-1050.5 2533.5,-1050.5 2533.5,-1026.5 2506.5,-1026.5"/>
+<text text-anchor="start" x="2511.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2538.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">DiscountAmount</text>
+<text text-anchor="start" x="2658.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="2506.5,-1002.5 2506.5,-1026.5 2533.5,-1026.5 2533.5,-1002.5 2506.5,-1002.5"/>
+<text text-anchor="start" x="2511.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2538.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">Total</text>
+<text text-anchor="start" x="2658.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="2506.5,-978.5 2506.5,-1002.5 2533.5,-1002.5 2533.5,-978.5 2506.5,-978.5"/>
+<text text-anchor="start" x="2511.5" y="-988.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2538.5" y="-987.1" font-family="DejaVu Sans" font-size="13.00">Status</text>
+<text text-anchor="start" x="2658.5" y="-987.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2506.5,-954.5 2506.5,-978.5 2533.5,-978.5 2533.5,-954.5 2506.5,-954.5"/>
+<text text-anchor="start" x="2511.5" y="-964.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2538.5" y="-963.1" font-family="DejaVu Sans" font-size="13.00">CreatedAt</text>
+<text text-anchor="start" x="2658.5" y="-963.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#b45309" points="2505,-954 2505,-1175 2714,-1175 2714,-954 2505,-954"/>
+</g>
+<!-- USERS&#45;&gt;ORDERS -->
+<g id="edge11" class="edge">
+<title>USERS&#45;&gt;ORDERS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1814.14,-1494.72C1982.67,-1486.21 2284.95,-1448.65 2483.5,-1295 2517.48,-1268.7 2543.55,-1230.53 2562.91,-1192.85"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1809.57,-1500.45 1809.03,-1489.47 1811.22,-1489.36 1811.76,-1500.35 1809.57,-1500.45"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.2,-1495.01 1813.69,-1494.74 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2566.78,-1184.91 2576.06,-1177.2 2569.2,-1179.97 2571.61,-1175.03 2571.61,-1175.03 2571.61,-1175.03 2569.2,-1179.97 2567.16,-1172.86 2566.78,-1184.91 2566.78,-1184.91"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2564.85" cy="-1188.87" rx="4.4" ry="4.4"/>
+</g>
+<!-- PAYMENT_METHODS -->
+<g id="node23" class="node">
+<title>PAYMENT_METHODS</title>
+<polygon fill="#b45309" stroke="transparent" points="1593.5,-1158.5 1593.5,-1185.5 1786.5,-1185.5 1786.5,-1158.5 1593.5,-1158.5"/>
+<text text-anchor="start" x="1604" y="-1169.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">PAYMENT_METHODS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1593.5,-1134.5 1593.5,-1158.5 1620.5,-1158.5 1620.5,-1134.5 1593.5,-1134.5"/>
+<text text-anchor="start" x="1598.5" y="-1144.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="1625.5" y="-1143.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1749.5" y="-1143.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1593.5,-1110.5 1593.5,-1134.5 1620.5,-1134.5 1620.5,-1110.5 1593.5,-1110.5"/>
+<text text-anchor="start" x="1598.5" y="-1120.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="1625.5" y="-1119.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1749.5" y="-1119.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-1086.5 1593.5,-1110.5 1620.5,-1110.5 1620.5,-1086.5 1593.5,-1086.5"/>
+<text text-anchor="start" x="1598.5" y="-1096.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-1095.1" font-family="DejaVu Sans" font-size="13.00">Brand</text>
+<text text-anchor="start" x="1749.5" y="-1095.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-1062.5 1593.5,-1086.5 1620.5,-1086.5 1620.5,-1062.5 1593.5,-1062.5"/>
+<text text-anchor="start" x="1598.5" y="-1072.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-1071.1" font-family="DejaVu Sans" font-size="13.00">Last4</text>
+<text text-anchor="start" x="1749.5" y="-1071.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-1038.5 1593.5,-1062.5 1620.5,-1062.5 1620.5,-1038.5 1593.5,-1038.5"/>
+<text text-anchor="start" x="1598.5" y="-1048.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-1047.1" font-family="DejaVu Sans" font-size="13.00">CardHolderName</text>
+<text text-anchor="start" x="1749.5" y="-1047.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-1014.5 1593.5,-1038.5 1620.5,-1038.5 1620.5,-1014.5 1593.5,-1014.5"/>
+<text text-anchor="start" x="1598.5" y="-1024.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-1023.1" font-family="DejaVu Sans" font-size="13.00">ExpiryMonth</text>
+<text text-anchor="start" x="1749.5" y="-1023.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-990.5 1593.5,-1014.5 1620.5,-1014.5 1620.5,-990.5 1593.5,-990.5"/>
+<text text-anchor="start" x="1598.5" y="-1000.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-999.1" font-family="DejaVu Sans" font-size="13.00">ExpiryYear</text>
+<text text-anchor="start" x="1749.5" y="-999.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-966.5 1593.5,-990.5 1620.5,-990.5 1620.5,-966.5 1593.5,-966.5"/>
+<text text-anchor="start" x="1598.5" y="-976.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-975.1" font-family="DejaVu Sans" font-size="13.00">ProviderToken</text>
+<text text-anchor="start" x="1749.5" y="-975.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1593.5,-942.5 1593.5,-966.5 1620.5,-966.5 1620.5,-942.5 1593.5,-942.5"/>
+<text text-anchor="start" x="1598.5" y="-952.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1625.5" y="-951.1" font-family="DejaVu Sans" font-size="13.00">IsDefault</text>
+<text text-anchor="start" x="1749.5" y="-951.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="none" stroke="#b45309" points="1592,-942 1592,-1187 1787,-1187 1787,-942 1592,-942"/>
+</g>
+<!-- USERS&#45;&gt;PAYMENT_METHODS -->
+<g id="edge12" class="edge">
+<title>USERS&#45;&gt;PAYMENT_METHODS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1689.5,-1381.14C1689.5,-1327.63 1689.5,-1263.52 1689.5,-1207.09"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1695,-1385.8 1684,-1385.8 1684,-1383.6 1695,-1383.6 1695,-1385.8"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1689.5,-1386.9 1689.5,-1381.4 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1689.5,-1198.09 1694.45,-1187.09 1689.5,-1192.59 1689.5,-1187.09 1689.5,-1187.09 1689.5,-1187.09 1689.5,-1192.59 1684.55,-1187.09 1689.5,-1198.09 1689.5,-1198.09"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1689.5" cy="-1202.49" rx="4.4" ry="4.4"/>
+</g>
+<!-- SEARCH_HISTORY -->
+<g id="node24" class="node">
+<title>SEARCH_HISTORY</title>
+<polygon fill="#be185d" stroke="transparent" points="1831.5,-1098.5 1831.5,-1125.5 2005.5,-1125.5 2005.5,-1098.5 1831.5,-1098.5"/>
+<text text-anchor="start" x="1844.5" y="-1109.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">SEARCH_HISTORY</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1831.5,-1074.5 1831.5,-1098.5 1858.5,-1098.5 1858.5,-1074.5 1831.5,-1074.5"/>
+<text text-anchor="start" x="1836.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="1863.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1950.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1831.5,-1050.5 1831.5,-1074.5 1858.5,-1074.5 1858.5,-1050.5 1831.5,-1050.5"/>
+<text text-anchor="start" x="1836.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="1863.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">UserId</text>
+<text text-anchor="start" x="1950.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1831.5,-1026.5 1831.5,-1050.5 1858.5,-1050.5 1858.5,-1026.5 1831.5,-1026.5"/>
+<text text-anchor="start" x="1836.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1863.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">Term</text>
+<text text-anchor="start" x="1950.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="1831.5,-1002.5 1831.5,-1026.5 1858.5,-1026.5 1858.5,-1002.5 1831.5,-1002.5"/>
+<text text-anchor="start" x="1836.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1863.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">SearchedAt</text>
+<text text-anchor="start" x="1950.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#be185d" points="1830.5,-1002 1830.5,-1127 2006.5,-1127 2006.5,-1002 1830.5,-1002"/>
+</g>
+<!-- USERS&#45;&gt;SEARCH_HISTORY -->
+<g id="edge13" class="edge">
+<title>USERS&#45;&gt;SEARCH_HISTORY</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1759.42,-1382.01C1775.99,-1353.83 1793.27,-1323.55 1808.5,-1295 1834.68,-1245.95 1861.7,-1189.66 1882.41,-1145.11"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1761.85,-1388.73 1752.38,-1383.14 1753.49,-1381.25 1762.97,-1386.83 1761.85,-1388.73"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1756.56,-1386.88 1759.35,-1382.15 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1886.12,-1137.09 1895.23,-1129.18 1888.43,-1132.09 1890.74,-1127.1 1890.74,-1127.1 1890.74,-1127.1 1888.43,-1132.09 1886.24,-1125.02 1886.12,-1137.09 1886.12,-1137.09"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1884.27" cy="-1141.08" rx="4.4" ry="4.4"/>
+</g>
+<!-- CONVERSATIONS -->
+<g id="node25" class="node">
+<title>CONVERSATIONS</title>
+<polygon fill="#be185d" stroke="transparent" points="2758.5,-1098.5 2758.5,-1125.5 2976.5,-1125.5 2976.5,-1098.5 2758.5,-1098.5"/>
+<text text-anchor="start" x="2796" y="-1109.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">CONVERSATIONS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2758.5,-1074.5 2758.5,-1098.5 2806.5,-1098.5 2806.5,-1074.5 2758.5,-1074.5"/>
+<text text-anchor="start" x="2763.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2811.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2921.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2758.5,-1050.5 2758.5,-1074.5 2806.5,-1074.5 2806.5,-1050.5 2758.5,-1050.5"/>
+<text text-anchor="start" x="2763.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="2811.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">StudentId</text>
+<text text-anchor="start" x="2921.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2758.5,-1026.5 2758.5,-1050.5 2806.5,-1050.5 2806.5,-1026.5 2758.5,-1026.5"/>
+<text text-anchor="start" x="2763.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="2811.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">InstructorId</text>
+<text text-anchor="start" x="2921.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="2758.5,-1002.5 2758.5,-1026.5 2806.5,-1026.5 2806.5,-1002.5 2758.5,-1002.5"/>
+<text text-anchor="start" x="2763.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2811.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">LastMessageAt</text>
+<text text-anchor="start" x="2921.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="none" stroke="#be185d" points="2757.5,-1002 2757.5,-1127 2977.5,-1127 2977.5,-1002 2757.5,-1002"/>
+</g>
+<!-- USERS&#45;&gt;CONVERSATIONS -->
+<g id="edge14" class="edge">
+<title>USERS&#45;&gt;CONVERSATIONS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1814.03,-1485.5C2058.15,-1461.87 2588.64,-1399.75 2735.5,-1295 2786.27,-1258.79 2820.3,-1196.5 2841.07,-1145.95"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1809.94,-1491.42 1808.88,-1480.47 1811.07,-1480.26 1812.13,-1491.21 1809.94,-1491.42"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.31,-1486.05 1813.79,-1485.52 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2844.39,-1137.47 2853,-1129.03 2846.39,-1132.35 2848.39,-1127.23 2848.39,-1127.23 2848.39,-1127.23 2846.39,-1132.35 2843.78,-1125.42 2844.39,-1137.47 2844.39,-1137.47"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2842.79" cy="-1141.57" rx="4.4" ry="4.4"/>
+<text text-anchor="middle" x="2662" y="-1338.2" font-family="DejaVu Sans" font-size="11.00" fill="#444444">student</text>
+</g>
+<!-- USERS&#45;&gt;CONVERSATIONS -->
+<g id="edge15" class="edge">
+<title>USERS&#45;&gt;CONVERSATIONS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1813.88,-1489.22C2048.39,-1473.69 2545.62,-1431.59 2693.5,-1347 2769.24,-1303.68 2816.35,-1212.69 2842.15,-1145.84"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1809.85,-1495 1809.13,-1484.02 1811.32,-1483.88 1812.05,-1494.85 1809.85,-1495"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1808.39,-1489.58 1813.88,-1489.22 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2845.2,-1137.56 2853.66,-1128.96 2847.11,-1132.4 2849.02,-1127.25 2849.02,-1127.25 2849.02,-1127.25 2847.11,-1132.4 2844.37,-1125.53 2845.2,-1137.56 2845.2,-1137.56"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2843.68" cy="-1141.69" rx="4.4" ry="4.4"/>
+<text text-anchor="middle" x="2735.5" y="-1338.2" font-family="DejaVu Sans" font-size="11.00" fill="#444444">instructor</text>
+</g>
+<!-- CATEGORIES -->
+<g id="node7" class="node">
+<title>CATEGORIES</title>
+<polygon fill="#0e7490" stroke="transparent" points="94.5,-1519.5 94.5,-1546.5 225.5,-1546.5 225.5,-1519.5 94.5,-1519.5"/>
+<text text-anchor="start" x="107" y="-1530.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">CATEGORIES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="94.5,-1495.5 94.5,-1519.5 121.5,-1519.5 121.5,-1495.5 94.5,-1495.5"/>
+<text text-anchor="start" x="99.5" y="-1505.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="126.5" y="-1504.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="188.5" y="-1504.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="94.5,-1471.5 94.5,-1495.5 121.5,-1495.5 121.5,-1471.5 94.5,-1471.5"/>
+<text text-anchor="start" x="99.5" y="-1481.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="126.5" y="-1480.1" font-family="DejaVu Sans" font-size="13.00">Name</text>
+<text text-anchor="start" x="188.5" y="-1480.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="94.5,-1447.5 94.5,-1471.5 121.5,-1471.5 121.5,-1447.5 94.5,-1447.5"/>
+<text text-anchor="start" x="99.5" y="-1457.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="126.5" y="-1456.1" font-family="DejaVu Sans" font-size="13.00">IconKey</text>
+<text text-anchor="start" x="188.5" y="-1456.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="none" stroke="#0e7490" points="93,-1447 93,-1548 226,-1548 226,-1447 93,-1447"/>
+</g>
+<!-- CATEGORIES&#45;&gt;COURSES -->
+<g id="edge17" class="edge">
+<title>CATEGORIES&#45;&gt;COURSES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M230.96,-1454.81C294.58,-1416.42 388.99,-1356.3 464.5,-1295 496.49,-1269.03 529.03,-1239.29 559.23,-1210.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="229.83,-1461.91 224.16,-1452.48 226.04,-1451.35 231.71,-1460.77 229.83,-1461.91"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="226.05,-1457.76 230.76,-1454.92 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="565.52,-1203.86 576.85,-1199.71 569.45,-1200.01 573.38,-1196.17 573.38,-1196.17 573.38,-1196.17 569.45,-1200.01 569.92,-1192.63 565.52,-1203.86 565.52,-1203.86"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="562.38" cy="-1206.94" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSE_OUTCOMES -->
+<g id="node9" class="node">
+<title>COURSE_OUTCOMES</title>
+<polygon fill="#0e7490" stroke="transparent" points="698.5,-688.5 698.5,-715.5 880.5,-715.5 880.5,-688.5 698.5,-688.5"/>
+<text text-anchor="start" x="703.5" y="-699.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">COURSE_OUTCOMES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="698.5,-664.5 698.5,-688.5 744.5,-688.5 744.5,-664.5 698.5,-664.5"/>
+<text text-anchor="start" x="703.5" y="-674.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="749.5" y="-673.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="833.5" y="-673.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="698.5,-640.5 698.5,-664.5 744.5,-664.5 744.5,-640.5 698.5,-640.5"/>
+<text text-anchor="start" x="703.5" y="-650.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="749.5" y="-649.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="833.5" y="-649.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="698.5,-616.5 698.5,-640.5 744.5,-640.5 744.5,-616.5 698.5,-616.5"/>
+<text text-anchor="start" x="703.5" y="-626.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="749.5" y="-625.1" font-family="DejaVu Sans" font-size="13.00">Text</text>
+<text text-anchor="start" x="833.5" y="-625.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="698.5,-592.5 698.5,-616.5 744.5,-616.5 744.5,-592.5 698.5,-592.5"/>
+<text text-anchor="start" x="703.5" y="-602.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="749.5" y="-601.1" font-family="DejaVu Sans" font-size="13.00">SortOrder</text>
+<text text-anchor="start" x="833.5" y="-601.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="none" stroke="#0e7490" points="697.5,-592 697.5,-717 881.5,-717 881.5,-592 697.5,-592"/>
+</g>
+<!-- COURSES&#45;&gt;COURSE_OUTCOMES -->
+<g id="edge18" class="edge">
+<title>COURSES&#45;&gt;COURSE_OUTCOMES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M750.11,-828.31C757.62,-795.37 764.87,-763.55 771.06,-736.38"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="754.45,-834.01 743.73,-831.57 744.22,-829.42 754.94,-831.87 754.45,-834.01"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="748.84,-833.86 750.07,-828.5 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="773.03,-727.74 780.3,-718.12 774.26,-722.38 775.48,-717.02 775.48,-717.02 775.48,-717.02 774.26,-722.38 770.65,-715.92 773.03,-727.74 773.03,-727.74"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="772.05" cy="-732.03" rx="4.4" ry="4.4"/>
+</g>
+<!-- SECTIONS -->
+<g id="node10" class="node">
+<title>SECTIONS</title>
+<polygon fill="#0e7490" stroke="transparent" points="509.5,-688.5 509.5,-715.5 653.5,-715.5 653.5,-688.5 509.5,-688.5"/>
+<text text-anchor="start" x="539" y="-699.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">SECTIONS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="509.5,-664.5 509.5,-688.5 536.5,-688.5 536.5,-664.5 509.5,-664.5"/>
+<text text-anchor="start" x="514.5" y="-674.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="541.5" y="-673.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="616.5" y="-673.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="509.5,-640.5 509.5,-664.5 536.5,-664.5 536.5,-640.5 509.5,-640.5"/>
+<text text-anchor="start" x="514.5" y="-650.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="541.5" y="-649.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="616.5" y="-649.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="509.5,-616.5 509.5,-640.5 536.5,-640.5 536.5,-616.5 509.5,-616.5"/>
+<text text-anchor="start" x="514.5" y="-626.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="541.5" y="-625.1" font-family="DejaVu Sans" font-size="13.00">Title</text>
+<text text-anchor="start" x="616.5" y="-625.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="509.5,-592.5 509.5,-616.5 536.5,-616.5 536.5,-592.5 509.5,-592.5"/>
+<text text-anchor="start" x="514.5" y="-602.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="541.5" y="-601.1" font-family="DejaVu Sans" font-size="13.00">SortOrder</text>
+<text text-anchor="start" x="616.5" y="-601.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="none" stroke="#0e7490" points="508.5,-592 508.5,-717 654.5,-717 654.5,-592 508.5,-592"/>
+</g>
+<!-- COURSES&#45;&gt;SECTIONS -->
+<g id="edge19" class="edge">
+<title>COURSES&#45;&gt;SECTIONS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M630.28,-828.56C620.98,-795.55 611.98,-763.65 604.31,-736.42"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="636.77,-831.31 626.18,-834.29 625.58,-832.18 636.17,-829.19 636.77,-831.31"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="631.77,-833.86 630.28,-828.57 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="601.82,-727.61 603.6,-715.68 600.33,-722.31 598.84,-717.02 598.84,-717.02 598.84,-717.02 600.33,-722.31 594.08,-718.36 601.82,-727.61 601.82,-727.61"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="603.02" cy="-731.84" rx="4.4" ry="4.4"/>
+</g>
+<!-- LEARNING_PATH_COURSES -->
+<g id="node13" class="node">
+<title>LEARNING_PATH_COURSES</title>
+<polygon fill="#0e7490" stroke="transparent" points="231.5,-676.5 231.5,-703.5 464.5,-703.5 464.5,-676.5 231.5,-676.5"/>
+<text text-anchor="start" x="236.5" y="-687.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">LEARNING_PATH_COURSES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="231.5,-652.5 231.5,-676.5 299.5,-676.5 299.5,-652.5 231.5,-652.5"/>
+<text text-anchor="start" x="236.5" y="-662.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="304.5" y="-661.1" font-family="DejaVu Sans" font-size="13.00">LearningPathId</text>
+<text text-anchor="start" x="424.5" y="-661.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="#fef3c7" stroke="transparent" points="231.5,-628.5 231.5,-652.5 299.5,-652.5 299.5,-628.5 231.5,-628.5"/>
+<text text-anchor="start" x="236.5" y="-638.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK,FK</text>
+<text text-anchor="start" x="304.5" y="-637.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="424.5" y="-637.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="231.5,-604.5 231.5,-628.5 299.5,-628.5 299.5,-604.5 231.5,-604.5"/>
+<text text-anchor="start" x="236.5" y="-614.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="304.5" y="-613.1" font-family="DejaVu Sans" font-size="13.00">SortOrder</text>
+<text text-anchor="start" x="424.5" y="-613.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="none" stroke="#0e7490" points="230,-604 230,-705 465,-705 465,-604 230,-604"/>
+</g>
+<!-- COURSES&#45;&gt;LEARNING_PATH_COURSES -->
+<g id="edge26" class="edge">
+<title>COURSES&#45;&gt;LEARNING_PATH_COURSES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M569.46,-909.61C537.41,-871.3 502.9,-830.48 470.5,-793 449.72,-768.97 426.58,-742.91 406.02,-720.02"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="576.87,-909.9 568.43,-916.96 567.02,-915.27 575.46,-908.21 576.87,-909.9"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="573.35,-914.27 569.83,-910.05 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="399.96,-713.28 396.28,-701.79 396.28,-709.19 392.6,-705.1 392.6,-705.1 392.6,-705.1 396.28,-709.19 388.92,-708.42 399.96,-713.28 399.96,-713.28"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="402.91" cy="-716.55" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSES&#45;&gt;ENROLLMENTS -->
+<g id="edge21" class="edge">
+<title>COURSES&#45;&gt;ENROLLMENTS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M823.72,-847.87C829.14,-842.98 834.73,-838.34 840.5,-834 945.08,-755.39 1005.52,-809.54 1123.5,-753 1124.73,-752.41 1125.96,-751.81 1127.18,-751.2"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="824.15,-854.96 816.69,-846.87 818.31,-845.38 825.76,-853.46 824.15,-854.96"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="819.61,-851.66 823.65,-847.93 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1135.22,-746.93 1147.25,-746.13 1140.07,-744.34 1144.93,-741.76 1144.93,-741.76 1144.93,-741.76 1140.07,-744.34 1142.6,-737.39 1135.22,-746.93 1135.22,-746.93"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1131.33" cy="-748.99" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSES&#45;&gt;REVIEWS -->
+<g id="edge22" class="edge">
+<title>COURSES&#45;&gt;REVIEWS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M569.07,-916.35C537.31,-885.96 501.63,-856.42 464.5,-834 362.34,-772.32 312.95,-810.72 208.5,-753 207.03,-752.19 205.57,-751.36 204.11,-750.51"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="576.35,-915.72 568.72,-923.65 567.13,-922.12 574.76,-914.2 576.35,-915.72"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="573.33,-920.45 569.36,-916.63 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="196.35,-745.61 189.7,-735.55 191.7,-742.67 187.06,-739.73 187.06,-739.73 187.06,-739.73 191.7,-742.67 184.41,-743.92 196.35,-745.61 196.35,-745.61"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="200.07" cy="-747.96" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSES&#45;&gt;WISHLIST_ITEMS -->
+<g id="edge23" class="edge">
+<title>COURSES&#45;&gt;WISHLIST_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M822.8,-857.4C828.65,-849.4 834.56,-841.57 840.5,-834 872.28,-793.47 912.03,-751.94 945.41,-719.15"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="824.66,-864.2 815.76,-857.73 817.05,-855.95 825.95,-862.42 824.66,-864.2"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="819.56,-861.86 822.8,-857.41 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="951.87,-712.86 963.21,-708.74 955.82,-709.03 959.76,-705.19 959.76,-705.19 959.76,-705.19 955.82,-709.03 956.31,-701.64 951.87,-712.86 951.87,-712.86"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="948.72" cy="-715.93" rx="4.4" ry="4.4"/>
+</g>
+<!-- COURSES&#45;&gt;CART_ITEMS -->
+<g id="edge24" class="edge">
+<title>COURSES&#45;&gt;CART_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M823.96,-846.02C829.29,-841.73 834.8,-837.71 840.5,-834 945.69,-765.51 1285.65,-805.85 1399.5,-753 1417.82,-744.5 1435.32,-731.94 1450.76,-718.64"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="823.87,-853.22 816.87,-844.74 818.57,-843.34 825.57,-851.82 823.87,-853.22"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="819.52,-849.68 823.76,-846.18 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1457.34,-712.63 1468.8,-708.88 1461.4,-708.93 1465.47,-705.22 1465.47,-705.22 1465.47,-705.22 1461.4,-708.93 1462.13,-701.56 1457.34,-712.63 1457.34,-712.63"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1454.09" cy="-715.6" rx="4.4" ry="4.4"/>
+</g>
+<!-- ORDER_ITEMS -->
+<g id="node21" class="node">
+<title>ORDER_ITEMS</title>
+<polygon fill="#b45309" stroke="transparent" points="1981.5,-688.5 1981.5,-715.5 2178.5,-715.5 2178.5,-688.5 1981.5,-688.5"/>
+<text text-anchor="start" x="2021" y="-699.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">ORDER_ITEMS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="1981.5,-664.5 1981.5,-688.5 2008.5,-688.5 2008.5,-664.5 1981.5,-664.5"/>
+<text text-anchor="start" x="1986.5" y="-674.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2013.5" y="-673.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2130.5" y="-673.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1981.5,-640.5 1981.5,-664.5 2008.5,-664.5 2008.5,-640.5 1981.5,-640.5"/>
+<text text-anchor="start" x="1986.5" y="-650.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2013.5" y="-649.1" font-family="DejaVu Sans" font-size="13.00">OrderId</text>
+<text text-anchor="start" x="2130.5" y="-649.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="1981.5,-616.5 1981.5,-640.5 2008.5,-640.5 2008.5,-616.5 1981.5,-616.5"/>
+<text text-anchor="start" x="1986.5" y="-626.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2013.5" y="-625.1" font-family="DejaVu Sans" font-size="13.00">CourseId</text>
+<text text-anchor="start" x="2130.5" y="-625.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="1981.5,-592.5 1981.5,-616.5 2008.5,-616.5 2008.5,-592.5 1981.5,-592.5"/>
+<text text-anchor="start" x="1986.5" y="-602.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2013.5" y="-601.1" font-family="DejaVu Sans" font-size="13.00">PriceAtPurchase</text>
+<text text-anchor="start" x="2130.5" y="-601.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="none" stroke="#b45309" points="1980,-592 1980,-717 2179,-717 2179,-592 1980,-592"/>
+</g>
+<!-- COURSES&#45;&gt;ORDER_ITEMS -->
+<g id="edge25" class="edge">
+<title>COURSES&#45;&gt;ORDER_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M823.98,-845.54C829.3,-841.41 834.81,-837.55 840.5,-834 914.37,-787.99 1533.54,-766.54 1619.5,-753 1736.07,-734.64 1867.67,-705.92 1960.15,-684.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="823.85,-852.69 816.98,-844.09 818.7,-842.72 825.57,-851.31 823.85,-852.69"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="819.55,-849.08 823.85,-845.64 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1968.85,-682.37 1980.69,-684.68 1974.21,-681.11 1979.56,-679.86 1979.56,-679.86 1979.56,-679.86 1974.21,-681.11 1978.43,-675.04 1968.85,-682.37 1968.85,-682.37"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1964.57" cy="-683.37" rx="4.4" ry="4.4"/>
+</g>
+<!-- LESSONS -->
+<g id="node11" class="node">
+<title>LESSONS</title>
+<polygon fill="#0e7490" stroke="transparent" points="877.5,-446.5 877.5,-473.5 1065.5,-473.5 1065.5,-446.5 877.5,-446.5"/>
+<text text-anchor="start" x="932.5" y="-457.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">LESSONS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="877.5,-422.5 877.5,-446.5 904.5,-446.5 904.5,-422.5 877.5,-422.5"/>
+<text text-anchor="start" x="882.5" y="-432.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="909.5" y="-431.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1028.5" y="-431.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="877.5,-398.5 877.5,-422.5 904.5,-422.5 904.5,-398.5 877.5,-398.5"/>
+<text text-anchor="start" x="882.5" y="-408.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="909.5" y="-407.1" font-family="DejaVu Sans" font-size="13.00">SectionId</text>
+<text text-anchor="start" x="1028.5" y="-407.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="877.5,-374.5 877.5,-398.5 904.5,-398.5 904.5,-374.5 877.5,-374.5"/>
+<text text-anchor="start" x="882.5" y="-384.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-383.1" font-family="DejaVu Sans" font-size="13.00">Title</text>
+<text text-anchor="start" x="1028.5" y="-383.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="877.5,-350.5 877.5,-374.5 904.5,-374.5 904.5,-350.5 877.5,-350.5"/>
+<text text-anchor="start" x="882.5" y="-360.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-359.1" font-family="DejaVu Sans" font-size="13.00">Description</text>
+<text text-anchor="start" x="1028.5" y="-359.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="877.5,-326.5 877.5,-350.5 904.5,-350.5 904.5,-326.5 877.5,-326.5"/>
+<text text-anchor="start" x="882.5" y="-336.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-335.1" font-family="DejaVu Sans" font-size="13.00">DurationMinutes</text>
+<text text-anchor="start" x="1028.5" y="-335.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="877.5,-302.5 877.5,-326.5 904.5,-326.5 904.5,-302.5 877.5,-302.5"/>
+<text text-anchor="start" x="882.5" y="-312.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-311.1" font-family="DejaVu Sans" font-size="13.00">SortOrder</text>
+<text text-anchor="start" x="1028.5" y="-311.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="877.5,-278.5 877.5,-302.5 904.5,-302.5 904.5,-278.5 877.5,-278.5"/>
+<text text-anchor="start" x="882.5" y="-288.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-287.1" font-family="DejaVu Sans" font-size="13.00">VideoPublicId</text>
+<text text-anchor="start" x="1028.5" y="-287.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="877.5,-254.5 877.5,-278.5 904.5,-278.5 904.5,-254.5 877.5,-254.5"/>
+<text text-anchor="start" x="882.5" y="-264.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="909.5" y="-263.1" font-family="DejaVu Sans" font-size="13.00">IsFreePreview</text>
+<text text-anchor="start" x="1028.5" y="-263.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="none" stroke="#0e7490" points="876.5,-254 876.5,-475 1066.5,-475 1066.5,-254 876.5,-254"/>
+</g>
+<!-- SECTIONS&#45;&gt;LESSONS -->
+<g id="edge20" class="edge">
+<title>SECTIONS&#45;&gt;LESSONS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M640.67,-587.88C651.81,-576.77 663.69,-565.7 675.5,-556 732.63,-509.07 801.87,-463.95 859.02,-429.41"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="641.27,-595.07 633.47,-587.31 635.03,-585.75 642.82,-593.51 641.27,-595.07"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="636.6,-591.97 640.48,-588.07 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="866.9,-424.69 878.88,-423.29 871.62,-421.86 876.34,-419.04 876.34,-419.04 876.34,-419.04 871.62,-421.86 873.79,-414.79 866.9,-424.69 866.9,-424.69"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="863.12" cy="-426.95" rx="4.4" ry="4.4"/>
+</g>
+<!-- LESSON_PROGRESS -->
+<g id="node15" class="node">
+<title>LESSON_PROGRESS</title>
+<polygon fill="#15803d" stroke="transparent" points="964.5,-144.5 964.5,-171.5 1202.5,-171.5 1202.5,-144.5 964.5,-144.5"/>
+<text text-anchor="start" x="1001" y="-155.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">LESSON_PROGRESS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="964.5,-120.5 964.5,-144.5 1012.5,-144.5 1012.5,-120.5 964.5,-120.5"/>
+<text text-anchor="start" x="969.5" y="-130.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="1017.5" y="-129.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="1141.5" y="-129.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="964.5,-96.5 964.5,-120.5 1012.5,-120.5 1012.5,-96.5 964.5,-96.5"/>
+<text text-anchor="start" x="969.5" y="-106.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="1017.5" y="-105.1" font-family="DejaVu Sans" font-size="13.00">EnrollmentId</text>
+<text text-anchor="start" x="1141.5" y="-105.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="964.5,-72.5 964.5,-96.5 1012.5,-96.5 1012.5,-72.5 964.5,-72.5"/>
+<text text-anchor="start" x="969.5" y="-82.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK,UK</text>
+<text text-anchor="start" x="1017.5" y="-81.1" font-family="DejaVu Sans" font-size="13.00">LessonId</text>
+<text text-anchor="start" x="1141.5" y="-81.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="964.5,-48.5 964.5,-72.5 1012.5,-72.5 1012.5,-48.5 964.5,-48.5"/>
+<text text-anchor="start" x="969.5" y="-58.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1017.5" y="-57.1" font-family="DejaVu Sans" font-size="13.00">IsCompleted</text>
+<text text-anchor="start" x="1141.5" y="-57.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="white" stroke="transparent" points="964.5,-24.5 964.5,-48.5 1012.5,-48.5 1012.5,-24.5 964.5,-24.5"/>
+<text text-anchor="start" x="969.5" y="-34.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1017.5" y="-33.1" font-family="DejaVu Sans" font-size="13.00">WatchedSeconds</text>
+<text text-anchor="start" x="1141.5" y="-33.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="964.5,-0.5 964.5,-24.5 1012.5,-24.5 1012.5,-0.5 964.5,-0.5"/>
+<text text-anchor="start" x="969.5" y="-10.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="1017.5" y="-9.1" font-family="DejaVu Sans" font-size="13.00">CompletedAt</text>
+<text text-anchor="start" x="1141.5" y="-9.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime?</text>
+<polygon fill="none" stroke="#15803d" points="963.5,0 963.5,-173 1203.5,-173 1203.5,0 963.5,0"/>
+</g>
+<!-- LESSONS&#45;&gt;LESSON_PROGRESS -->
+<g id="edge29" class="edge">
+<title>LESSONS&#45;&gt;LESSON_PROGRESS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1018.26,-248.28C1025.87,-229.51 1033.72,-210.17 1041.22,-191.7"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1021.6,-254.67 1011.4,-250.54 1012.23,-248.5 1022.42,-252.63 1021.6,-254.67"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1016.09,-253.62 1018.16,-248.53 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1044.59,-183.38 1053.31,-175.05 1046.66,-178.28 1048.73,-173.19 1048.73,-173.19 1048.73,-173.19 1046.66,-178.28 1044.14,-171.33 1044.59,-183.38 1044.59,-183.38"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1042.94" cy="-187.46" rx="4.4" ry="4.4"/>
+</g>
+<!-- LEARNING_PATHS -->
+<g id="node12" class="node">
+<title>LEARNING_PATHS</title>
+<polygon fill="#0e7490" stroke="transparent" points="274.5,-1098.5 274.5,-1125.5 442.5,-1125.5 442.5,-1098.5 274.5,-1098.5"/>
+<text text-anchor="start" x="284.5" y="-1109.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">LEARNING_PATHS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="274.5,-1074.5 274.5,-1098.5 301.5,-1098.5 301.5,-1074.5 274.5,-1074.5"/>
+<text text-anchor="start" x="279.5" y="-1084.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="306.5" y="-1083.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="405.5" y="-1083.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="274.5,-1050.5 274.5,-1074.5 301.5,-1074.5 301.5,-1050.5 274.5,-1050.5"/>
+<text text-anchor="start" x="279.5" y="-1060.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="306.5" y="-1059.1" font-family="DejaVu Sans" font-size="13.00">Title</text>
+<text text-anchor="start" x="405.5" y="-1059.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="274.5,-1026.5 274.5,-1050.5 301.5,-1050.5 301.5,-1026.5 274.5,-1026.5"/>
+<text text-anchor="start" x="279.5" y="-1036.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="306.5" y="-1035.1" font-family="DejaVu Sans" font-size="13.00">BadgeText</text>
+<text text-anchor="start" x="405.5" y="-1035.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="274.5,-1002.5 274.5,-1026.5 301.5,-1026.5 301.5,-1002.5 274.5,-1002.5"/>
+<text text-anchor="start" x="279.5" y="-1012.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="306.5" y="-1011.1" font-family="DejaVu Sans" font-size="13.00">ThumbnailUrl</text>
+<text text-anchor="start" x="405.5" y="-1011.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="none" stroke="#0e7490" points="273.5,-1002 273.5,-1127 443.5,-1127 443.5,-1002 273.5,-1002"/>
+</g>
+<!-- LEARNING_PATHS&#45;&gt;LEARNING_PATH_COURSES -->
+<g id="edge27" class="edge">
+<title>LEARNING_PATHS&#45;&gt;LEARNING_PATH_COURSES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M356.69,-996.18C354.67,-921.41 351.43,-801.25 349.39,-725.44"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="362.31,-1000.73 351.31,-1001.03 351.25,-998.83 362.25,-998.53 362.31,-1000.73"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="356.84,-1001.98 356.69,-996.48 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="349.14,-716.3 353.79,-705.17 348.99,-710.8 348.84,-705.3 348.84,-705.3 348.84,-705.3 348.99,-710.8 343.89,-705.44 349.14,-716.3 349.14,-716.3"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="349.26" cy="-720.7" rx="4.4" ry="4.4"/>
+</g>
+<!-- ENROLLMENTS&#45;&gt;LESSON_PROGRESS -->
+<g id="edge28" class="edge">
+<title>ENROLLMENTS&#45;&gt;LESSON_PROGRESS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M1229.09,-550.46C1197.16,-448.9 1148.6,-294.5 1116.47,-192.33"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1235.72,-553.18 1225.22,-556.48 1224.56,-554.38 1235.06,-551.08 1235.72,-553.18"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="1230.8,-555.88 1229.15,-550.63 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="1113.77,-183.75 1115.19,-171.77 1112.12,-178.5 1110.47,-173.25 1110.47,-173.25 1110.47,-173.25 1112.12,-178.5 1105.75,-174.74 1113.77,-183.75 1113.77,-183.75"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="1115.09" cy="-187.94" rx="4.4" ry="4.4"/>
+</g>
+<!-- PROMO_CODES -->
+<g id="node19" class="node">
+<title>PROMO_CODES</title>
+<polygon fill="#b45309" stroke="transparent" points="2949.5,-1567.5 2949.5,-1594.5 3156.5,-1594.5 3156.5,-1567.5 2949.5,-1567.5"/>
+<text text-anchor="start" x="2988.5" y="-1578.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">PROMO_CODES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2949.5,-1543.5 2949.5,-1567.5 2977.5,-1567.5 2977.5,-1543.5 2949.5,-1543.5"/>
+<text text-anchor="start" x="2954.5" y="-1553.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2982.5" y="-1552.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="3101.5" y="-1552.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1519.5 2949.5,-1543.5 2977.5,-1543.5 2977.5,-1519.5 2949.5,-1519.5"/>
+<text text-anchor="start" x="2954.5" y="-1529.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">UK</text>
+<text text-anchor="start" x="2982.5" y="-1528.1" font-family="DejaVu Sans" font-size="13.00">Code</text>
+<text text-anchor="start" x="3101.5" y="-1528.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1495.5 2949.5,-1519.5 2977.5,-1519.5 2977.5,-1495.5 2949.5,-1495.5"/>
+<text text-anchor="start" x="2954.5" y="-1505.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2982.5" y="-1504.1" font-family="DejaVu Sans" font-size="13.00">DiscountPercent</text>
+<text text-anchor="start" x="3101.5" y="-1504.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1471.5 2949.5,-1495.5 2977.5,-1495.5 2977.5,-1471.5 2949.5,-1471.5"/>
+<text text-anchor="start" x="2954.5" y="-1481.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2982.5" y="-1480.1" font-family="DejaVu Sans" font-size="13.00">ExpiresAt</text>
+<text text-anchor="start" x="3101.5" y="-1480.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1447.5 2949.5,-1471.5 2977.5,-1471.5 2977.5,-1447.5 2949.5,-1447.5"/>
+<text text-anchor="start" x="2954.5" y="-1457.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2982.5" y="-1456.1" font-family="DejaVu Sans" font-size="13.00">UsageLimit</text>
+<text text-anchor="start" x="3101.5" y="-1456.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1423.5 2949.5,-1447.5 2977.5,-1447.5 2977.5,-1423.5 2949.5,-1423.5"/>
+<text text-anchor="start" x="2954.5" y="-1433.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2982.5" y="-1432.1" font-family="DejaVu Sans" font-size="13.00">UsedCount</text>
+<text text-anchor="start" x="3101.5" y="-1432.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">int</text>
+<polygon fill="white" stroke="transparent" points="2949.5,-1399.5 2949.5,-1423.5 2977.5,-1423.5 2977.5,-1399.5 2949.5,-1399.5"/>
+<text text-anchor="start" x="2954.5" y="-1409.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2982.5" y="-1408.1" font-family="DejaVu Sans" font-size="13.00">IsActive</text>
+<text text-anchor="start" x="3101.5" y="-1408.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">bool</text>
+<polygon fill="none" stroke="#b45309" points="2948,-1399 2948,-1596 3157,-1596 3157,-1399 2948,-1399"/>
+</g>
+<!-- PROMO_CODES&#45;&gt;ORDERS -->
+<g id="edge32" class="edge">
+<title>PROMO_CODES&#45;&gt;ORDERS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M2962.06,-1395.01C2938.04,-1372.67 2910.84,-1350.95 2882.5,-1335 2823.5,-1301.79 2788.69,-1336.9 2735.5,-1295 2701.98,-1268.59 2676.1,-1230.69 2656.76,-1193.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2969.16,-1394.13 2961.63,-1402.15 2960.03,-1400.64 2967.55,-1392.62 2969.16,-1394.13"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="2966.2,-1398.89 2962.19,-1395.13 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2652.78,-1185.16 2652.37,-1173.1 2650.35,-1180.22 2647.93,-1175.29 2647.93,-1175.29 2647.93,-1175.29 2650.35,-1180.22 2643.48,-1177.47 2652.78,-1185.16 2652.78,-1185.16"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2654.72" cy="-1189.11" rx="4.4" ry="4.4"/>
+</g>
+<!-- ORDERS&#45;&gt;ORDER_ITEMS -->
+<g id="edge30" class="edge">
+<title>ORDERS&#45;&gt;ORDER_ITEMS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M2564.75,-948.49C2544.69,-908.28 2517.72,-865.39 2483.5,-834 2402.52,-759.7 2285.58,-712.65 2198.34,-685.62"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2571.86,-950.47 2561.99,-955.33 2561.02,-953.36 2570.89,-948.49 2571.86,-950.47"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="2567.41,-953.89 2564.98,-948.95 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2189.89,-683.08 2180.78,-675.17 2184.63,-681.5 2179.36,-679.91 2179.36,-679.91 2179.36,-679.91 2184.63,-681.5 2177.93,-684.65 2189.89,-683.08 2189.89,-683.08"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2194.11" cy="-684.35" rx="4.4" ry="4.4"/>
+</g>
+<!-- PAYMENTS -->
+<g id="node22" class="node">
+<title>PAYMENTS</title>
+<polygon fill="#b45309" stroke="transparent" points="2481.5,-724.5 2481.5,-751.5 2726.5,-751.5 2726.5,-724.5 2481.5,-724.5"/>
+<text text-anchor="start" x="2558.5" y="-735.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">PAYMENTS</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2481.5,-700.5 2481.5,-724.5 2508.5,-724.5 2508.5,-700.5 2481.5,-700.5"/>
+<text text-anchor="start" x="2486.5" y="-710.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2513.5" y="-709.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2665.5" y="-709.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2481.5,-676.5 2481.5,-700.5 2508.5,-700.5 2508.5,-676.5 2481.5,-676.5"/>
+<text text-anchor="start" x="2486.5" y="-686.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2513.5" y="-685.1" font-family="DejaVu Sans" font-size="13.00">OrderId</text>
+<text text-anchor="start" x="2665.5" y="-685.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="2481.5,-652.5 2481.5,-676.5 2508.5,-676.5 2508.5,-652.5 2481.5,-652.5"/>
+<text text-anchor="start" x="2486.5" y="-662.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2513.5" y="-661.1" font-family="DejaVu Sans" font-size="13.00">Provider</text>
+<text text-anchor="start" x="2665.5" y="-661.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2481.5,-628.5 2481.5,-652.5 2508.5,-652.5 2508.5,-628.5 2481.5,-628.5"/>
+<text text-anchor="start" x="2486.5" y="-638.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2513.5" y="-637.1" font-family="DejaVu Sans" font-size="13.00">ProviderTransactionId</text>
+<text text-anchor="start" x="2665.5" y="-637.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2481.5,-604.5 2481.5,-628.5 2508.5,-628.5 2508.5,-604.5 2481.5,-604.5"/>
+<text text-anchor="start" x="2486.5" y="-614.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2513.5" y="-613.1" font-family="DejaVu Sans" font-size="13.00">Status</text>
+<text text-anchor="start" x="2665.5" y="-613.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2481.5,-580.5 2481.5,-604.5 2508.5,-604.5 2508.5,-580.5 2481.5,-580.5"/>
+<text text-anchor="start" x="2486.5" y="-590.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2513.5" y="-589.1" font-family="DejaVu Sans" font-size="13.00">Amount</text>
+<text text-anchor="start" x="2665.5" y="-589.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">decimal</text>
+<polygon fill="white" stroke="transparent" points="2481.5,-556.5 2481.5,-580.5 2508.5,-580.5 2508.5,-556.5 2481.5,-556.5"/>
+<text text-anchor="start" x="2486.5" y="-566.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2513.5" y="-565.1" font-family="DejaVu Sans" font-size="13.00">PaidAt</text>
+<text text-anchor="start" x="2665.5" y="-565.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime?</text>
+<polygon fill="none" stroke="#b45309" points="2480,-556 2480,-753 2727,-753 2727,-556 2480,-556"/>
+</g>
+<!-- ORDERS&#45;&gt;PAYMENTS -->
+<g id="edge31" class="edge">
+<title>ORDERS&#45;&gt;PAYMENTS</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M2607.81,-948.36C2606.97,-891.74 2605.97,-823.76 2605.15,-767.56"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2613.37,-952.71 2602.37,-952.88 2602.34,-950.68 2613.34,-950.51 2613.37,-952.71"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="2607.89,-953.9 2607.81,-948.4 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2599.45,-754.34 2610.45,-754.18 2610.48,-756.38 2599.49,-756.54 2599.45,-754.34"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="2604.94,-753.16 2605.02,-758.66 "/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2605.08" cy="-763.06" rx="4.4" ry="4.4"/>
+</g>
+<!-- MESSAGES -->
+<g id="node26" class="node">
+<title>MESSAGES</title>
+<polygon fill="#be185d" stroke="transparent" points="2771.5,-712.5 2771.5,-739.5 2974.5,-739.5 2974.5,-712.5 2771.5,-712.5"/>
+<text text-anchor="start" x="2827.5" y="-723.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00" fill="white">MESSAGES</text>
+<polygon fill="#fef3c7" stroke="transparent" points="2771.5,-688.5 2771.5,-712.5 2798.5,-712.5 2798.5,-688.5 2771.5,-688.5"/>
+<text text-anchor="start" x="2776.5" y="-698.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">PK</text>
+<text text-anchor="start" x="2803.5" y="-697.1" font-family="DejaVu Sans" font-size="13.00">Id</text>
+<text text-anchor="start" x="2913.5" y="-697.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2771.5,-664.5 2771.5,-688.5 2798.5,-688.5 2798.5,-664.5 2771.5,-664.5"/>
+<text text-anchor="start" x="2776.5" y="-674.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2803.5" y="-673.1" font-family="DejaVu Sans" font-size="13.00">ConversationId</text>
+<text text-anchor="start" x="2913.5" y="-673.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="#e0e7ff" stroke="transparent" points="2771.5,-640.5 2771.5,-664.5 2798.5,-664.5 2798.5,-640.5 2771.5,-640.5"/>
+<text text-anchor="start" x="2776.5" y="-650.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555">FK</text>
+<text text-anchor="start" x="2803.5" y="-649.1" font-family="DejaVu Sans" font-size="13.00">SenderId</text>
+<text text-anchor="start" x="2913.5" y="-649.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">guid</text>
+<polygon fill="white" stroke="transparent" points="2771.5,-616.5 2771.5,-640.5 2798.5,-640.5 2798.5,-616.5 2771.5,-616.5"/>
+<text text-anchor="start" x="2776.5" y="-626.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2803.5" y="-625.1" font-family="DejaVu Sans" font-size="13.00">Content</text>
+<text text-anchor="start" x="2913.5" y="-625.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">string</text>
+<polygon fill="white" stroke="transparent" points="2771.5,-592.5 2771.5,-616.5 2798.5,-616.5 2798.5,-592.5 2771.5,-592.5"/>
+<text text-anchor="start" x="2776.5" y="-602.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2803.5" y="-601.1" font-family="DejaVu Sans" font-size="13.00">SentAt</text>
+<text text-anchor="start" x="2913.5" y="-601.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime</text>
+<polygon fill="white" stroke="transparent" points="2771.5,-568.5 2771.5,-592.5 2798.5,-592.5 2798.5,-568.5 2771.5,-568.5"/>
+<text text-anchor="start" x="2776.5" y="-578.7" font-family="DejaVu Sans" font-weight="bold" font-size="11.00" fill="#555555"> </text>
+<text text-anchor="start" x="2803.5" y="-577.1" font-family="DejaVu Sans" font-size="13.00">ReadAt</text>
+<text text-anchor="start" x="2913.5" y="-577.7" font-family="DejaVu Sans" font-size="11.00" fill="#777777">datetime?</text>
+<polygon fill="none" stroke="#be185d" points="2770,-568 2770,-741 2975,-741 2975,-568 2770,-568"/>
+</g>
+<!-- CONVERSATIONS&#45;&gt;MESSAGES -->
+<g id="edge16" class="edge">
+<title>CONVERSATIONS&#45;&gt;MESSAGES</title>
+<path fill="none" stroke="#6b7280" stroke-width="1.4" d="M2868.32,-996.18C2869.11,-932.34 2870.29,-835.43 2871.2,-761.27"/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2873.77,-1000.94 2862.77,-1000.81 2862.79,-998.61 2873.79,-998.74 2873.77,-1000.94"/>
+<polyline fill="none" stroke="#6b7280" stroke-width="1.4" points="2868.25,-1001.98 2868.32,-996.48 "/>
+<polygon fill="#6b7280" stroke="#6b7280" stroke-width="1.4" points="2871.32,-752.01 2876.4,-741.07 2871.38,-746.51 2871.45,-741.01 2871.45,-741.01 2871.45,-741.01 2871.38,-746.51 2866.5,-740.95 2871.32,-752.01 2871.32,-752.01"/>
+<ellipse fill="none" stroke="#6b7280" stroke-width="1.4" cx="2871.26" cy="-756.41" rx="4.4" ry="4.4"/>
+</g>
+</g>
+</svg>
+</div></div>
+<div id="hint">Scroll / pinch to zoom · drag to move · vector, stays sharp at any zoom</div>
+<script>
+const W=3268.5,H=1732.0,view=document.getElementById('view'),stage=document.getElementById('stage'),pct=document.getElementById('pct');
+let s=1,x=0,y=0;const MIN=0.05,MAX=8;
+function apply(){stage.style.transform=`translate(${x}px,${y}px) scale(${s})`;pct.textContent=Math.round(s*100)+'%';}
+function zoomAt(f,px,py){const ns=Math.min(MAX,Math.max(MIN,s*f));x=px-(px-x)*(ns/s);y=py-(py-y)*(ns/s);s=ns;apply();}
+function fit(){const vw=view.clientWidth,vh=view.clientHeight;s=Math.min(vw/W,vh/H)*0.98;x=(vw-W*s)/2;y=(vh-H*s)/2;apply();}
+function center(){return[view.clientWidth/2,view.clientHeight/2];}
+document.getElementById('in').onclick=()=>zoomAt(1.4,...center());
+document.getElementById('out').onclick=()=>zoomAt(1/1.4,...center());
+document.getElementById('fit').onclick=fit;
+document.getElementById('one').onclick=()=>zoomAt(1/s,...center());
+view.addEventListener('wheel',e=>{e.preventDefault();const r=view.getBoundingClientRect();zoomAt(e.deltaY<0?1.15:1/1.15,e.clientX-r.left,e.clientY-r.top);},{passive:false});
+const P=new Map();let last=0;
+view.addEventListener('pointerdown',e=>{view.setPointerCapture(e.pointerId);P.set(e.pointerId,[e.clientX,e.clientY]);view.classList.add('drag');last=0;});
+view.addEventListener('pointermove',e=>{if(!P.has(e.pointerId))return;const p=P.get(e.pointerId);
+ if(P.size===1){x+=e.clientX-p[0];y+=e.clientY-p[1];P.set(e.pointerId,[e.clientX,e.clientY]);apply();}
+ else{P.set(e.pointerId,[e.clientX,e.clientY]);const v=[...P.values()],d=Math.hypot(v[0][0]-v[1][0],v[0][1]-v[1][1]);
+  if(last){const r=view.getBoundingClientRect();zoomAt(d/last,(v[0][0]+v[1][0])/2-r.left,(v[0][1]+v[1][1])/2-r.top);}last=d;}});
+['pointerup','pointercancel'].forEach(t=>view.addEventListener(t,e=>{P.delete(e.pointerId);last=0;if(!P.size)view.classList.remove('drag');}));
+addEventListener('resize',fit);fit();
+setTimeout(()=>document.getElementById('hint').style.opacity=0,5000);
+</script></body></html>

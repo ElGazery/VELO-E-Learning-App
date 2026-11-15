@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Velo.Api/Velo.Api.csproj" />
+  <Project Path="Velo.Application/Velo.Application.csproj" />
+  <Project Path="Velo.Domain/Velo.Domain.csproj" />
+  <Project Path="Velo.Infrastructure/Velo.Infrastructure.csproj" />
+</Solution>
