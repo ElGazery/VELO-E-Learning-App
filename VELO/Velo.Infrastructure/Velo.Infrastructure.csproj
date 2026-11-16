@@ -17,9 +17,7 @@
 
 	<ItemGroup>
 		<Folder Include="Persistence\configuration\" />
-		<Folder Include="Repositories\" />
 		<Folder Include="Services\" />
-		<Folder Include="SpecificationEvaluator\" />
 	</ItemGroup>
 
 	<ItemGroup>
