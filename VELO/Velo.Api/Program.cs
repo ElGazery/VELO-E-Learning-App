@@ -1,4 +1,5 @@
 using Velo.Api.Extensions;
+using Velo.Api.MiddleWare;
 using Velo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerDocumentation();
 }
 
+app.UseMiddleware<GlobalExceptionHanlderMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
