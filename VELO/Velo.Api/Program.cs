@@ -1,5 +1,6 @@
 using Velo.Api.Extensions;
 using Velo.Api.MiddleWare;
+using Velo.Application;
 using Velo.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Add Infrastructure Services (DbContext & Identity)
 builder.Services.AddInfrastructureDependencyInjection(builder.Configuration);
 
+builder.Services.AddApplication();
 // Add Swagger with JWT Support
 builder.Services.AddSwaggerDocumentation();
 
