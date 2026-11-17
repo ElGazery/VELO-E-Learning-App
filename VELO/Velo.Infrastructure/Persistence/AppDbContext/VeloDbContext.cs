@@ -11,6 +11,8 @@ namespace Velo.Infrastructure.Persistence.AppDbContext
     {
         public VeloDbContext(DbContextOptions<VeloDbContext>options):base(options)
         { }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
 
     }
 }
