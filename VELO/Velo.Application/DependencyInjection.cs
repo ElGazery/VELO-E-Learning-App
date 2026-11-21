@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Velo.Application.Behaviors;
+using Velo.Application.Common.Settings;
 
 namespace Velo.Application
 {

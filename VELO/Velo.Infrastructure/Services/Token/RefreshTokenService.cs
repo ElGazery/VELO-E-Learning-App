@@ -24,13 +24,13 @@ namespace Velo.Infrastructure.Services.Token
             _jwtSettings = options.Value;
         }
 
-        public string GenerateToken()
+        private string GenerateToken()
         {
             var randomBytes = RandomNumberGenerator.GetBytes(64);
             return WebEncoders.Base64UrlEncode(randomBytes);
         }
 
-        public string HashToken(string token)
+        private string HashToken(string token)
         {
             var tokenBytes = WebEncoders.Base64UrlDecode(token);
             var hashBytes = SHA256.HashData(tokenBytes);

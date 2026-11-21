@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Velo.Application.Common.Settings;
 using Velo.Domain.Entities.Identity;
 using Velo.Infrastructure.Persistence.AppDbContext;
 
@@ -32,6 +33,9 @@ namespace Velo.Infrastructure
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
                 options.Lockout.AllowedForNewUsers = true;
             });
+            services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+            services.Configure<FrontEndSettings>(configuration.GetSection("FrontEndSettings"));
+
             return services;
         }
     }

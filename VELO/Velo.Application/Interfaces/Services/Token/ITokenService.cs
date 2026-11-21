@@ -7,7 +7,7 @@ namespace Velo.Application.Interfaces.Services.Token
 {
     public interface ITokenService
     {
-        Task<string> GenerateTokenAsync(ApplicationUser user);
+        Task<string> GenerateTokenAsync(ApplicationUser user,CancellationToken cancellationToken);
 
     }
 }

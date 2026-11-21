@@ -20,7 +20,7 @@ namespace Velo.Infrastructure.Services.Token
             _userManager = userManager;
         }
 
-        public async Task<string> GenerateTokenAsync(ApplicationUser user)
+        public async Task<string> GenerateTokenAsync(ApplicationUser user,CancellationToken cancellationToken)
         {
 
 
